@@ -1,0 +1,13 @@
+.ohui-icon:hover {
+  background: red;
+}
+.ohui-icon-search {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("icons/search.png");
+}
+/*# sourceMappingURL=icon.css.map */
