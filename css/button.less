@@ -1,0 +1,82 @@
+.button-base(){
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  position: relative;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e6e6e6;
+    border: solid 1px #adadad;
+  }
+  &:focus {
+    border: solid 1px transparent;
+    outline: none;
+  }
+  &:active {
+    border: solid 1px transparent;
+    background: #f1f1f1f1;
+  }
+
+  &[disabled] {
+    &:hover {
+      border: solid 1px #ccc;
+      background-color: transparent;
+    }
+  }
+}
+
+.button-text-base(@bgColor,@fontColor: #fff) {
+  padding: 0 10px;
+  line-height: 24px;
+  height: 24px;
+  font-size: 12px;
+  color: @fontColor;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background: @bgColor;
+  &:hover {
+    background: darken(@bgColor,5%);
+  }
+  &:active {
+    background: darken(@bgColor,10);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+/*文字，图标按钮*/
+.ohui-btn-default {
+  .button-base();
+  .btn-text {
+    margin: 2px 12px 2px 28px;
+    display: block;
+    line-height: 20px;
+    font-size: 12px;
+  }
+  .ohui-icon {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+  }
+}
+/*图标按钮*/
+.ohui-btn-icon-default {
+  .button-base();
+  width: 28px;
+  height: 26px;
+  .ohui-icon {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+  }
+}
+/*文字按钮*/
+.ohui-btn-text-default {
+  .button-text-base(@brand-primary);
+}

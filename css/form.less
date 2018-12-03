@@ -1,0 +1,187 @@
+.ohui-label-base() {
+  .noselect();
+  cursor: pointer;
+}
+.form-icon-base(@fontSize: 14px){
+  font-family: "iconfont" !important;
+  font-size: @fontSize;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 单选框
+.ohui-radio {
+  .ohui-label-base();
+  & > input[type="radio"] {
+    display: none;
+    & + span {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      line-height: 22px;
+      padding-left: 26px;
+      &::after {
+        position: absolute;
+        content: '\e600';
+        display: block;
+        width: 14px;
+        height: 14px;
+        line-height: 1;
+        left: 6px;
+        top: 4px;
+        color: inherit;
+        .form-icon-base();
+      }
+    }
+    &:checked + span {
+      color: @main-color;
+      &::after {
+        content: '\e61d';
+      }
+    }
+    &:disabled + span{
+      color: #c0c4cc;
+      cursor: not-allowed;;
+    }
+  }
+}
+
+// 复选框
+.ohui-checkbox {
+  .ohui-label-base();
+  & > input[type="checkbox"] {
+    display: none;
+    & + span {
+      position: relative;
+      display: inline-block;
+      padding-left: 26px;
+      vertical-align: middle;
+      line-height: 22px;
+      &::after {
+        content: '\e61e';
+        position: absolute;
+        left: 6px;
+        top: 4px;
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+        line-height: 1;
+        color: inherit;
+        .form-icon-base();
+      }
+    }
+    &:checked + span {
+      color: @main-color;
+      &::after {
+        content: '\e601';
+      }
+    }
+    &:disabled + span{
+      color: @disable-color;
+    }
+  }
+}
+
+// switch(开关)
+.ohui-switch {
+  .ohui-label-base();
+  & > input[type="checkbox"] {
+    display: none;
+    & + span {
+      .box-sizing(border-box);
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 40px;
+      height: 20px;
+      background: @disable-color;
+      border: solid 1px @disable-color;
+      border-radius: 10px;
+      .transition(all 0.3s);
+      &::after {
+        position: absolute;
+        content: '';
+        left: 1px;
+        top: 1px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #fff;
+        .transition(all 0.3s);
+      }
+    }
+    &:checked + span {
+      background: @main-color;
+      border-color: @main-color;
+      &::after {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+// input 输入框
+.ohui-input {
+  padding: 0 10px;
+  width: 100%;
+  line-height: 22px;
+  height: 22px;
+  font-size: 12px;
+  border: solid 1px @border-color;
+  .box-sizing(border-box);
+
+  &:focus {
+    border-color: @input-border-color;
+    box-shadow: 0 0 5px 0 lighten(@input-border-color,6%);
+    outline: none;
+  }
+  &[required] {
+    border-color: #ff8400;
+    &:focus {
+      border-color: #ff8400;
+      box-shadow: 0 0 3px 0 #ffa341;
+    }
+  }
+  &:disabled {
+    border-color: @border-color;
+    box-shadow: none;
+    outline: none;
+    background: #fafafa;
+    cursor: not-allowed;
+  }
+}
+// input-box
+.ohui-input-box {
+  position: relative;
+  width: 200px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+
+
+  .ohui-icon {
+    position: absolute;
+    top: 3px;
+    left: 100%;
+    margin-left: -23px;
+    &.front {
+      left: 7px;
+      margin-left: 0;
+    }
+  }
+  .ohui-icon + .ohui-input {
+    padding-right: 29px;
+  }
+  .ohui-icon.front + .ohui-input {
+    padding-left: 29px;
+    padding-right: 10px;
+  }
+}
+// input-name
+.ohui-input-name {
+
+}
+
+

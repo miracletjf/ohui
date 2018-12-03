@@ -1,388 +1,622 @@
-.ohui-icon-search {
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import "//at.alicdn.com/t/font_943077_ttjr2l9ev.css";
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+.ohui-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   background-repeat: no-repeat;
   background-position: center;
+}
+.ohui-icon-search {
   background-image: url("icons/search.png");
 }
 .ohui-icon-set {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/set.png");
 }
 .ohui-icon-cancel {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/cancel.png");
 }
 .ohui-icon-more {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/more.png");
 }
 .ohui-icon-ok {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/ok.png");
 }
 .ohui-icon-no {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/no.png");
 }
 .ohui-icon-edit {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/pencil.png");
 }
 .ohui-icon-print {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/print.png");
 }
 .ohui-icon-redo {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/redo.png");
 }
 .ohui-icon-undo {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/undo.png");
 }
 .ohui-icon-sum {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/sum.png");
 }
 .ohui-icon-tip {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/tip.png");
 }
 .ohui-icon-refresh {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/reload.png");
 }
 .ohui-icon-wrench {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/wrench.png");
 }
 .ohui-icon-user-set {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/user_config.png");
 }
 .ohui-icon-arrow-refresh {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/arrow_refresh.png");
 }
 .ohui-icon-arrow-rotate-ni {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/arrow_rotate_anticlockwise.png");
 }
 .ohui-icon-arrow-rotate-s {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/arrow_rotate_clockwise.png");
 }
 .ohui-icon-back {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/back.png");
 }
 .ohui-icon-cut {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/cut.png");
 }
 .ohui-icon-add {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/edit_add.png");
 }
 .ohui-icon-remove {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/edit_remove.png");
 }
 .ohui-icon-save {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/filesave.png");
 }
 .ohui-icon-filter {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/filter.png");
 }
 .ohui-icon-file-search {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/folder_search.png");
 }
 .ohui-icon-help {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/help.png");
 }
 .ohui-icon-information {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/information.png");
 }
 .ohui-icon-user {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/man.png");
 }
 .ohui-icon-password {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/lock.png");
 }
 .ohui-icon-add-gray {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini_add.png");
 }
 .ohui-icon-close-gray {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini_cross.png");
 }
 .ohui-icon-forbidden-gray {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/gray_delete.png");
 }
 .ohui-icon-edit-gray {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini_edit.png");
 }
 .ohui-icon-remove-gray {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini_minus.png");
 }
 .ohui-icon-refresh-gray {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini_refresh.png");
 }
 .ohui-icon-set-gray {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini_set.png");
 }
 .ohui-icon-ok-gray {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini_tick.png");
 }
 .ohui-icon-mini-add {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini-append.png");
 }
 .ohui-icon-mini-remove {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini-delete.png");
 }
 .ohui-icon-mini-cancel {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini-cancel.png");
 }
 .ohui-icon-mini-ok {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini-ok.png");
 }
 .ohui-icon-mini-edit {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-image: url("icons/mini-pencil.png");
 }
 .ohui-icon-mini-refresh {
+  background-image: url("icons/mini-reload.png");
+}
+/*文字，图标按钮*/
+.ohui-btn-default {
   display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  position: relative;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+.ohui-btn-default:hover {
+  background-color: #e6e6e6;
+  border: solid 1px #adadad;
+}
+.ohui-btn-default:focus {
+  border: solid 1px transparent;
+  outline: none;
+}
+.ohui-btn-default:active {
+  border: solid 1px transparent;
+  background: #f1f1f1f1;
+}
+.ohui-btn-default[disabled]:hover {
+  border: solid 1px #ccc;
+  background-color: transparent;
+}
+.ohui-btn-default .btn-text {
+  margin: 2px 12px 2px 28px;
+  display: block;
+  line-height: 20px;
+  font-size: 12px;
+}
+.ohui-btn-default .ohui-icon {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+/*图标按钮*/
+.ohui-btn-icon-default {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  position: relative;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  width: 28px;
+  height: 26px;
+}
+.ohui-btn-icon-default:hover {
+  background-color: #e6e6e6;
+  border: solid 1px #adadad;
+}
+.ohui-btn-icon-default:focus {
+  border: solid 1px transparent;
+  outline: none;
+}
+.ohui-btn-icon-default:active {
+  border: solid 1px transparent;
+  background: #f1f1f1f1;
+}
+.ohui-btn-icon-default[disabled]:hover {
+  border: solid 1px #ccc;
+  background-color: transparent;
+}
+.ohui-btn-icon-default .ohui-icon {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+/*文字按钮*/
+.ohui-btn-text-default {
+  padding: 0 10px;
+  line-height: 24px;
+  height: 24px;
+  font-size: 12px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #337ab7;
+}
+.ohui-btn-text-default:hover {
+  background: #2d6da3;
+}
+.ohui-btn-text-default:active {
+  background: #285f8f;
+}
+.ohui-btn-text-default:focus {
+  outline: none;
+}
+.ohui-radio {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  not supported by any browser */
+  cursor: pointer;
+}
+.ohui-radio > input[type="radio"] {
+  display: none;
+}
+.ohui-radio > input[type="radio"] + span {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  line-height: 22px;
+  padding-left: 26px;
+}
+.ohui-radio > input[type="radio"] + span::after {
+  position: absolute;
+  content: '\e600';
+  display: block;
+  width: 14px;
+  height: 14px;
+  line-height: 1;
+  left: 6px;
+  top: 4px;
+  color: inherit;
+  font-family: "iconfont" !important;
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ohui-radio > input[type="radio"]:checked + span {
+  color: #337ab7;
+}
+.ohui-radio > input[type="radio"]:checked + span::after {
+  content: '\e61d';
+}
+.ohui-radio > input[type="radio"]:disabled + span {
+  color: #c0c4cc;
+  cursor: not-allowed;
+}
+.ohui-checkbox {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  not supported by any browser */
+  cursor: pointer;
+}
+.ohui-checkbox > input[type="checkbox"] {
+  display: none;
+}
+.ohui-checkbox > input[type="checkbox"] + span {
+  position: relative;
+  display: inline-block;
+  padding-left: 26px;
+  vertical-align: middle;
+  line-height: 22px;
+}
+.ohui-checkbox > input[type="checkbox"] + span::after {
+  content: '\e61e';
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  line-height: 1;
+  color: inherit;
+  font-family: "iconfont" !important;
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ohui-checkbox > input[type="checkbox"]:checked + span {
+  color: #337ab7;
+}
+.ohui-checkbox > input[type="checkbox"]:checked + span::after {
+  content: '\e601';
+}
+.ohui-checkbox > input[type="checkbox"]:disabled + span {
+  color: #dcdfe6;
+}
+.ohui-switch {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  not supported by any browser */
+  cursor: pointer;
+}
+.ohui-switch > input[type="checkbox"] {
+  display: none;
+}
+.ohui-switch > input[type="checkbox"] + span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 20px;
+  background: #dcdfe6;
+  border: solid 1px #dcdfe6;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ohui-switch > input[type="checkbox"] + span::after {
+  position: absolute;
+  content: '';
+  left: 1px;
+  top: 1px;
   width: 16px;
   height: 16px;
-  line-height: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("icons/mini-reload.png");
+  border-radius: 50%;
+  background: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ohui-switch > input[type="checkbox"]:checked + span {
+  background: #337ab7;
+  border-color: #337ab7;
+}
+.ohui-switch > input[type="checkbox"]:checked + span::after {
+  margin-left: 20px;
+}
+.ohui-input {
+  padding: 0 10px;
+  width: 100%;
+  line-height: 22px;
+  height: 22px;
+  font-size: 12px;
+  border: solid 1px #ccc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ohui-input:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px 0 #81bded;
+  outline: none;
+}
+.ohui-input[required] {
+  border-color: #ff8400;
+}
+.ohui-input[required]:focus {
+  border-color: #ff8400;
+  box-shadow: 0 0 3px 0 #ffa341;
+}
+.ohui-input:disabled {
+  border-color: #ccc;
+  box-shadow: none;
+  outline: none;
+  background: #fafafa;
+  cursor: not-allowed;
+}
+.ohui-input-box {
+  position: relative;
+  width: 200px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.ohui-input-box .ohui-icon {
+  position: absolute;
+  top: 3px;
+  left: 100%;
+  margin-left: -23px;
+}
+.ohui-input-box .ohui-icon.front {
+  left: 7px;
+  margin-left: 0;
+}
+.ohui-input-box .ohui-icon + .ohui-input {
+  padding-right: 29px;
+}
+.ohui-input-box .ohui-icon.front + .ohui-input {
+  padding-left: 29px;
+  padding-right: 10px;
 }
 /*# sourceMappingURL=onhonestUI.css.map */
