@@ -1,0 +1,62 @@
+.ohui-table {
+  table-layout: fixed;
+  min-width: 100%;
+  border-top: none;
+  &-wrap {
+    border: solid 1px @border-color;
+    border-width: 0;
+    border-bottom-width: 1px;
+  }
+  > thead > tr > th,
+    thead > tr > td,
+    tr .th {
+    padding: 5px 10px;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #efefef;
+    color: #000;
+    text-align: center;
+    &:hover {
+      background-color: #ebf7ff;
+    }
+  }
+
+  > thead > tr:first-child > th,
+    thead > tr:first-child > td {
+    border-top: none;
+  }
+
+  > tbody > tr:last-child > th,
+    tbody > tr:last-child > td {
+    border-bottom: none;
+  }
+
+  > tbody > tr {
+    &:nth-child(2n) {
+      background-color: #fafafa;
+    }
+    &:hover {
+      background-color: #e4efff;
+    }
+    &.active {
+      background-color: #e5e5e5;
+    }
+
+    > td {
+      font-size: 13px;
+      line-height: 17px;
+    }
+  }
+
+  > thead th,
+  > thead td,
+  > tbody th,
+  > tbody td {
+    padding: 5px 6px;
+    line-height: 18px;
+    font-size: 14px;
+    border: dotted 1px @border-color;
+    text-align: center;
+  }
+}

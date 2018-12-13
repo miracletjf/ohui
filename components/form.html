@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" href="../css/onhonestUI.css">
+  <!-- laydate 日期选择器 -->
+  <link rel="stylesheet" href="../vendor/laydate/theme/default/laydate.css">
+  <script src="../vendor/laydate/laydate.js"></script>
 </head>
 <body>
   <main>
@@ -63,12 +66,59 @@
     <fieldset>
       <legend>输入框组</legend>
       <div class="ohui-form-group">
-        <div class="ohui-input-name">
-
+        <span class="ohui-input-name">用户名</span>
+        <div class="ohui-input-box">
+          <input type="text" class="ohui-input">
         </div>
-        <div class="ohui-form-input-box"></div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>文本域</legend>
+      <div class="ohui-form-group">
+        <span class="ohui-input-name">用户名</span>
+        <label class="ohui-input-box">
+          <textarea class="ohui-textarea"></textarea>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>选择框</legend>
+      <div class="ohui-form-group">
+        <span class="ohui-input-name">行政机关</span>
+        <label class="ohui-input-box" id="select_input">
+          <span class="ohui-icon ohui-icon-arrow-down" title="展开"></span>
+          <input type="text" class="ohui-input" readonly>
+        </label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>日期选择 laydate</legend>
+      <div class="ohui-form-group">
+        <span class="ohui-input-name">选择日期</span>
+        <label class="ohui-input-box">
+          <span class="ohui-icon ohui-icon-calendar" title="日历"></span>
+          <input type="text" class="ohui-input" id="datePrick" readonly>
+        </label>
       </div>
     </fieldset>
   </main>
+
+  <script src="../vendor/jquery-1.8.3.min.js"></script>
+  <script src="../js/ohui-form.js"></script>
+
+  <script>
+    $(function () {
+      // 选择框
+      let select = new OhuiSelect('#select_input',('123456789').split(''),function ($item) {
+        console.log($item.text());
+      })
+      // 日期选择
+      laydate.render({
+        elem: '#datePrick',
+        range: '-'
+      });
+    });
+  </script>
+
 </body>
 </html>

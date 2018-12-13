@@ -1,0 +1,148 @@
+// 显示
+.show {
+  display: block!important;
+}
+// 隐藏
+.hide {
+  display: none!important;
+}
+// 左对齐
+.align-left {
+  text-align: left!important;
+}
+// 右对齐
+.align-right {
+  text-align: right!important;
+}
+// 居中对齐
+.align-center {
+  text-align: center!important;
+}
+// margin
+.marg-t-10 {
+  margin-top: 10px!important;
+}
+.marg-t-12 {
+  margin-top: 12px!important;
+}
+.marg-t-14 {
+  margin-top: 14px!important;
+}
+.marg-t-15 {
+  margin-top: 15px!important;
+}
+.marg-t-20 {
+  margin-top: 20px!important;
+}
+
+// 清除浮动
+.clearfix {
+  .clearfix();
+}
+// 左浮动
+.push-left {
+  float: left;
+}
+// 右浮动
+.push-right {
+  float: right;
+}
+// 工具栏 toolbar
+.ohui-toolbar {
+  padding: 4px 10px;
+  border: solid 1px @border-color;
+
+  .ohui-btn-default {
+    .btn-text {
+      margin: 2px 6px 2px 26px;
+      display: block;
+      line-height: 18px;
+      font-size: 12px;
+    }
+  }
+}
+
+// 页码 pager
+.ohui-pager {
+  padding: 3px 5px;
+  border: solid 1px @border-color;
+  .clearfix();
+
+  .ohui-pager-box {
+    font-size: 0;
+  }
+  .item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 2px;
+    font-size: 14px;
+    line-height: 26px;
+
+    select {
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      border: solid 1px @border-color;
+    }
+
+    input[type="text"] {
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: middle;
+      width: 28px;
+      padding: 1px 3px;
+      margin: 0 2px;
+      height: 18px;
+      line-height: 16px;
+      font-size: 12px;
+      border: solid 1px @border-color;
+    }
+
+    .ohui-btn-icon-default {
+      &:disabled {
+        border: none;
+        outline: none;
+        cursor: not-allowed;
+        .ohui-icon {
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,.5);
+          }
+        }
+      }
+    }
+  }
+  .line {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 2px;
+    width: 0;
+    height: 20px;
+    border: solid 0 @border-color;
+    border-left-width: 1px;
+  }
+}
+// 弹出层背景
+.ohui-popBox-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 110;
+  font-size: 0;
+  text-align: center;
+  &::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+}

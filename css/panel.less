@@ -1,0 +1,46 @@
+// 面板 panel
+.ohui-panel {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+
+  &-header {
+    position: relative;
+    background-color: @main-color;
+    padding: 6px 15px;
+    line-height: 16px;
+    font-size: 0;
+    color: #fff;
+    border: solid 1px @border-color;
+
+    > h2 {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: inherit;
+      font-size: 14px;
+      color: inherit;
+    }
+
+    & + .ohui-panel-body {
+      border-top-width: 0;
+    }
+  }
+  &-body {
+    position: relative;
+    border: solid 1px @border-color;
+    .ohui-search-box {
+      padding: 4px 10px;
+      border-bottom: solid 1px @border-color;
+      & + .ohui-toolbar {
+        border-bottom-width: 0;
+      }
+    }
+    .ohui-toolbar {
+      border-width: 0;
+      border-bottom-width: 1px;
+    }
+    .ohui-pager {
+      border-width: 0;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../css/onhonestUI.css">
+  <script src="../vendor/jquery-1.8.3.min.js"></script>
+  <link rel="stylesheet" href="../vendor/animate.css">
+</head>
+<body>
+  <main>
+    <fieldset>
+      <legend>loading</legend>
+      <button class="ohui-btn-text-default" id="loadingPage">页面加载</button>
+    </fieldset>
+    <fieldset>
+      <legend>message 消息提示</legend>
+      <button class="ohui-btn-text-default" id="infoMessage" onclick="messageOpen('测试')">弹出消息</button>
+    </fieldset>
+    <fieldset>
+      <legend>messagebox 弹出框</legend>
+      <button class="ohui-btn-text-default" id="messageBoxBtn">弹出框</button>
+    </fieldset>
+  </main>
+
+  <!--  <div class="ohui-message-wrap"><span class="ohui-message-box"></span></div>-->
+  <!--<div class="ohui-loading-wrap"><div class="ohui-middle-box"><span class="loading-box">页面加载中…</span></div></div>-->
+
+
+
+  <script src="../js/ohui-common.js"></script>
+  <script src="../js/ohui-notice.js"></script>
+
+  <script>
+    $(function () {
+      $('#loadingPage').on('click',function (e) {
+        loadingOpen();
+        setTimeout(loadingClose,2000);
+      })
+
+      $('#messageBoxBtn').on('click',function () {
+        messageBoxOpen('消息提示','内容内容内容内容内容内容',function () {
+
+        });
+      })
+    })
+
+
+  </script>
+</body>
+</html>
