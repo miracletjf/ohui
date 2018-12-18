@@ -1,0 +1,69 @@
+/* navigation */
+
+.ohui-tabs {
+  margin-top: 4px;
+  &-head {
+    padding: 0 12px;
+    border-bottom: solid 2px #2991d9;
+    > li {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 8px;
+      margin: 0 9px;
+      font-size: 0.9375rem;
+      min-width: 60px;
+      height: 28px;
+      line-height: 32px;
+      background-image: url("./images/navTab.png");
+      background-position: 0 -32px;
+      cursor: pointer;
+      text-align: center;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        left: -18px;
+        top: 0;
+        width: 18px;
+        height: 28px;
+        background-image: url("./images/navTab.png");
+        background-position: 0 0;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        right: -18px;
+        top: 0;
+        width: 18px;
+        height: 28px;
+        background-image: url("./images/navTab.png");
+        background-position: 0 -66px;
+      }
+
+      &.active {
+        color: #fff;
+        background-position: 0 -135px;
+        &::before {
+          background-position: 0 -102px;
+        }
+        &::after {
+          z-index: 3;
+          background-position: 0 -169px;
+        }
+      }
+
+    }
+  }
+  &-body {
+    padding-top: 4px;
+    border: solid 1px @main-color;
+    border-top: none;
+    > li {
+      padding: 10px 15px;
+    }
+  }
+}

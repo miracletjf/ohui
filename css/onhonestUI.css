@@ -1207,4 +1207,68 @@ button {
 .ohui-message-box-footer .btn-box button {
   margin: 6px 10px;
 }
+/* navigation */
+.ohui-tabs {
+  margin-top: 4px;
+}
+.ohui-tabs-head {
+  padding: 0 12px;
+  border-bottom: solid 2px #2991d9;
+}
+.ohui-tabs-head > li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 8px;
+  margin: 0 9px;
+  font-size: 0.9375rem;
+  min-width: 60px;
+  height: 28px;
+  line-height: 32px;
+  background-image: url("images/navTab.png");
+  background-position: 0 -32px;
+  cursor: pointer;
+  text-align: center;
+}
+.ohui-tabs-head > li::before {
+  position: absolute;
+  content: "";
+  display: block;
+  left: -18px;
+  top: 0;
+  width: 18px;
+  height: 28px;
+  background-image: url("images/navTab.png");
+  background-position: 0 0;
+}
+.ohui-tabs-head > li::after {
+  position: absolute;
+  content: "";
+  display: block;
+  right: -18px;
+  top: 0;
+  width: 18px;
+  height: 28px;
+  background-image: url("images/navTab.png");
+  background-position: 0 -66px;
+}
+.ohui-tabs-head > li.active {
+  color: #fff;
+  background-position: 0 -135px;
+}
+.ohui-tabs-head > li.active::before {
+  background-position: 0 -102px;
+}
+.ohui-tabs-head > li.active::after {
+  z-index: 3;
+  background-position: 0 -169px;
+}
+.ohui-tabs-body {
+  padding-top: 4px;
+  border: solid 1px #337ab7;
+  border-top: none;
+}
+.ohui-tabs-body > li {
+  padding: 10px 15px;
+}
 /*# sourceMappingURL=onhonestUI.css.map */

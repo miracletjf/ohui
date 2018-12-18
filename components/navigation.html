@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../css/onhonestUI.css">
+</head>
+<body>
+  <main>
+    <fieldset>
+      <legend>tabs 切换</legend>
+      <div class="ohui-tabs" id="ohui_tabs">
+        <ul class="ohui-tabs-head">
+          <li>tab 1</li>
+          <li>tab 2</li>
+          <li>tab 3</li>
+        </ul>
+        <ul class="ohui-tabs-body">
+          <li>content 1</li>
+          <li>content 2</li>
+          <li>content 3</li>
+        </ul>
+      </div>
+    </fieldset>
+  </main>
+
+  <script src="../vendor/jquery-1.8.3.min.js"></script>
+  <script src="../js/ohui-navigation.js"></script>
+  <script>
+    $(function () {
+      $('#ohui_tabs').tabsChange();
+    });
+    
+
+  </script>
+
+</body>
+</html>
