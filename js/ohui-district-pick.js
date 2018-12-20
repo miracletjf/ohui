@@ -1,4 +1,4 @@
-function DistrictPick(selector) {
+function DistrictPick(selector,callback) {
   this.outer = $(selector);
   this.options = {
     defaultText : {
@@ -7,12 +7,12 @@ function DistrictPick(selector) {
       area: '—— 区 ——'
     }
   };
-  this.init();
+  this.init(callback);
 }
 
 DistrictPick.prototype = {
   constructor: DistrictPick,
-  init: function () {
+  init: function (callback) {
     let $selects = this.outer.find('label.ohui-input-box');
 
     this.$province =  $selects.eq(0);
@@ -26,10 +26,6 @@ DistrictPick.prototype = {
 /*    this.appendOptions(this.$province,this.provinces,this.options.defaultText.province);
 
     this.bindEvents();*/
-  },
-  bindEvents: function () {
-    this.provinceChange();
-    this.cityChange();
   },
   getJsonDatas: function (url) {
     let res;
@@ -45,34 +41,53 @@ DistrictPick.prototype = {
   initOptions: function () {
     var _this = this;
 
-    this.$province.find('.ohui-select-box').remove();
-    new OhuiSelect(
+    _this.addSelects(
       _this.$province,
-      _this.formatDatas(_this.provinces,'id','name',_this.options.defaultText.province),
-      function ($item) {
-        var provinceId = $item.attr('data-id');
-        var provinceName = $item.text();
-        new OhuiSelect(
+      _this.provinces,
+      _this.options.defaultText.province,
+      function ($currentPro) {
+        var provinceId = $currentPro.attr('data-id');
+        var provinceName = $currentPro.text();
+        _this.addSelects(
           _this.$city,
-          _this.formatDatas(_this.cities[provinceId],'id','name',_this.options.defaultText.city),
-          function ($item) {
-            var cityId = $item.attr('data-id');
-            var cityName = $item.text();
-            new OhuiSelect(
+          _this.cities[provinceId],
+          _this.options.defaultText.city,
+          function ($currentCity) {
+            var cityId = $currentCity.attr('data-id');
+            var cityName = $currentCity.text();
+            _this.addSelects(
               _this.$area,
-              _this.formatDatas(_this.areas[cityId],'id','name',_this.options.defaultText.area),
-              function ($item) {
-                var areaId = $item.attr('data-id');
-                var areaName = $item.text();
+              _this.areas[cityId],
+              _this.options.defaultText.area,
+              function ($currentArea) {
+                var areaId = $currentArea.attr('data-id');
+                var areaName = $currentArea.text();
                 console.log(provinceName,cityName,areaName);
-              })
-          })
-    })
-
-
-
+              }
+            );
+          });
+        _this.addSelects(_this.$area, [], _this.options.defaultText.area);
+      });
+    _this.addSelects(
+      _this.$city,
+      [],
+      _this.options.defaultText.city
+    );
+    _this.addSelects(
+      _this.$area,
+      [],
+      _this.options.defaultText.area
+    )
 /*    this.$city.html('<option>'+this.options.defaultText.city+'</option>');
     this.$area.html('<option>'+this.options.defaultText.area+'</option>');*/
+  },
+  addSelects: function ($object,arrays,defaultTExt,callback) {
+    var _this = this;
+    $object.find('.ohui-select-box').remove();
+    new OhuiSelect(
+      $object,
+      _this.formatDatas(arrays,'id','name',defaultTExt),
+      callback);
   },
   resetOptions: function($obj,text) {
     $obj.html('<option>'+text+'</option>');
@@ -101,11 +116,17 @@ DistrictPick.prototype = {
     })
   },
   formatDatas: function (datas,name,text,begin) {
-    var resMap = datas.map(function (item) {
-      return {id:item[name],text:item[text]}
-    });
+    var resMap;
+    if(datas){
+      resMap = datas.map(function (item) {
+        return {id:item[name],text:item[text]}
+      });
+    }else {
+      resMap = [];
+    }
     resMap.splice(0,0,{id: '',text:begin})
 
+    console.log(resMap)
     return resMap;
   }
 }

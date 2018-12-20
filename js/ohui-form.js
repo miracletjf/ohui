@@ -38,13 +38,14 @@ OhuiSelect.prototype = {
 
     // 按钮点击事件
     _this.$icon.on('click',function (e) {
-      _this.$selectBox.toggleClass('show');
+      $('.ohui-select-box').removeClass('show');
+      _this.$selectBox.addClass('show');
       _this.setFocus();
       e.stopPropagation();
     });
 
     // 选项选择事件
-    _this.$select.on('click','.ohui-select-box li',function (e) {
+    _this.$select.find('.ohui-select-box').on('click','li',function (e) {
       _this.$input.val($(this).text());
       _this.$selectBox.removeClass('show');
       _this.setFocus();
@@ -58,7 +59,7 @@ OhuiSelect.prototype = {
     // input 点击事件
     _this.$input.on('click',function (e) {
       e.stopPropagation();
-    })
+    });
 
     // 取消事件冒泡
     $(document).on('click',function (e) {
@@ -68,9 +69,11 @@ OhuiSelect.prototype = {
   // 生成下拉列表
   generateItems : function (items) {
     let itemsHtml = items.reduce(function (res,item) {
+      console.log(item);
       return res += '<li data-id="'+item.id+'">'+item.text+'</li>';
     },'');
-    this.$selectBox = $('<ul class="ohui-select-box">'+itemsHtml+'</ul>>').appendTo(this.$select);
+
+    this.$selectBox = $('<ul class="ohui-select-box">'+itemsHtml+'</ul>').appendTo(this.$select);
   },
   // 给input设置焦点
   setFocus: function () {
@@ -79,10 +82,11 @@ OhuiSelect.prototype = {
   },
   autoSelect: function (value,array) {
     var _this = this;
-
     var index = _this.findIndexOfArrs(value,array);
+    var $selectEl = _this.$select.find('.ohui-select-box li').eq(index);
 
-    this.$select.find('.ohui-select-box li').eq(index).click();
+    $selectEl.addClass('active');
+    _this.$input.val($selectEl.text());
     this.$input.blur();
   },
   findIndexOfArrs: function (value,arr) {
