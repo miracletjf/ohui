@@ -23,16 +23,62 @@
       </div>
     </fieldset>
     <fieldset>
-      <legend></legend>
+      <legend>侧边菜单（slide nav）</legend>
+      <div class="ohui-demo-box">
+        <aside class="ohui-sidebar-wrap skin-blue" id="asideMenu"></aside>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>topNavBar 头部导航</legend>
+      <div class="ohui-demo-box">
+        <div class="topNavBar">
+          <div class="logo-box pull-left">温州粮食管理系统</div>
+          <div class="nav-box clearfix">
+            <ul class="menu-box pull-left">
+              <li class="active"><span class="text">测试文字</span></li>
+              <li><span class="text">测试文字</span></li>
+              <li><a class="text" href="">测试文字</a></li>
+              <li><a class="text" href="">测试文字</a></li>
+              <li><a class="text" href="">测试文字</a></li>
+              <li><a class="text" href="">测试文字</a></li>
+              <li><a class="text" href="">测试文字</a></li>
+            </ul>
+            <div class="userMenu-box pull-right">
+              <div class="userName-box">
+                <i class="icon"></i>
+                <span class="text">管理员</span>
+              </div>
+              <ul class="userMenu">
+                <li><span class="text">个人中心</span></li>
+                <li><span class="text">消息</span></li>
+                <li><span class="text">退出</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </fieldset>
   </main>
 
   <script src="../vendor/jquery-1.8.3.min.js"></script>
   <script src="../js/ohui-navigation.js"></script>
+  <script src="../js/ohui-sidebar-menu.js"></script>
   <script>
     $(function () {
       $('#ohui_tabs').tabsChange();
+      loadSiderBar();
     });
+
+    function loadSiderBar() {
+      $.ajax({
+        url: '../json/sideBar/menu.json',
+        success: function (data) {
+          console.log(data);
+          $('#asideMenu').append(compileSideJson(data));
+          $('#asideMenu').find('.sidebar-menu').sidebarMenu();
+        }
+      })
+    }
   </script>
 
 </body>

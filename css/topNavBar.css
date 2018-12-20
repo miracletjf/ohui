@@ -1,0 +1,92 @@
+/* 变量 */
+.topNavBar {
+  background: #333;
+  box-shadow: 0 1px 8px 0 #929292;
+}
+.topNavBar .logo-box {
+  padding: 0 20px;
+  height: 56px;
+  line-height: 56px;
+  font-family: 楷体;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.topNavBar .logo-box img {
+  display: inline-block;
+  height: 100%;
+}
+.topNavBar .nav-box {
+  display: block;
+  padding-left: 10px;
+}
+.topNavBar .menu-box {
+  display: block;
+  margin: 0;
+  margin-left: 10px;
+  padding: 8px 10px;
+  font-size: 0;
+}
+.topNavBar .menu-box li {
+  display: inline-block;
+}
+.topNavBar .menu-box li .text {
+  display: block;
+  padding: 0 10px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #888;
+  cursor: pointer;
+}
+.topNavBar .menu-box li .text:hover {
+  color: #ddd;
+}
+.topNavBar .userMenu-box {
+  margin-right: 10px;
+  position: relative;
+  z-index: 2;
+}
+.topNavBar .userMenu-box .userName-box {
+  padding: 8px;
+  min-width: 100px;
+  cursor: pointer;
+}
+.topNavBar .userMenu-box .userName-box .text {
+  display: block;
+  color: #ddd;
+  text-align: right;
+  font-size: 16px;
+  line-height: 40px;
+}
+.topNavBar .userMenu-box .userMenu {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: -5px;
+  padding: 6px 0;
+  background: #333;
+  border-radius: 6px;
+  transition: all .4s;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.topNavBar .userMenu-box .userMenu li .text {
+  display: block;
+  padding: 0 12px;
+  line-height: 26px;
+  text-align: right;
+  color: #999;
+  cursor: pointer;
+}
+.topNavBar .userMenu-box .userMenu li .text:hover {
+  color: #ddd;
+  background: #474747;
+}
+.topNavBar .userMenu-box:hover .userMenu {
+  visibility: visible;
+  transform: translateX(0);
+  opacity: 1;
+}
+/*# sourceMappingURL=topNavBar.css.map */

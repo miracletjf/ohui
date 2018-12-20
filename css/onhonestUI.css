@@ -1,4 +1,5 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import "../vendor/fontAwesome/css/font-awesome.css";
 @import "//at.alicdn.com/t/font_943077_ttjr2l9ev.css";
 html {
   font-family: sans-serif;
@@ -40,10 +41,12 @@ template {
 }
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 a:active,
 a:hover {
   outline: 0;
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: 1px dotted;
@@ -352,6 +355,10 @@ button {
   vertical-align: middle;
   width: 0;
   height: 100%;
+}
+.ohui-demo-box {
+  position: relative;
+  height: 600px;
 }
 .ohui-icon {
   display: inline-block;
@@ -1270,5 +1277,239 @@ button {
 }
 .ohui-tabs-body > li {
   padding: 10px 15px;
+}
+/**/
+/*
+    Component: Sidebar
+--------------------------
+*/
+.ohui-sidebar {
+  margin-bottom: 5px;
+  margin-right: -17px;
+  height: 100%;
+  overflow-y: scroll;
+}
+.ohui-sidebar .sidebar-form input:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent!important;
+}
+.ohui-sidebar .sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ohui-sidebar .sidebar-menu > li {
+  margin: 0;
+  padding: 0;
+}
+.ohui-sidebar .sidebar-menu > li.header {
+  padding: 10px 25px 10px 15px;
+  font-size: 12px;
+  color: #223058;
+  background: #e0e0e0;
+  font-weight: bold;
+}
+.ohui-sidebar .sidebar-menu > li > a {
+  padding: 8px 5px 8px 15px;
+  display: block;
+}
+.ohui-sidebar .sidebar-menu > li > a > .fa,
+.ohui-sidebar .sidebar-menu > li > a > .glyphicon,
+.ohui-sidebar .sidebar-menu > li > a > .ion {
+  width: 20px;
+  text-align: center;
+}
+.ohui-sidebar .sidebar-menu .treeview-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 8px;
+}
+.ohui-sidebar .sidebar-menu .treeview-menu > li {
+  margin: 0;
+}
+.ohui-sidebar .sidebar-menu .treeview-menu > li > a {
+  padding: 5px 5px 5px 15px;
+  display: block;
+  font-size: 12px;
+  margin: 0px 0px;
+}
+.ohui-sidebar .sidebar-menu .treeview-menu > li > a > .fa,
+.ohui-sidebar .sidebar-menu .treeview-menu > li > a > .glyphicon,
+.ohui-sidebar .sidebar-menu .treeview-menu > li > a > .ion {
+  width: 20px;
+  text-align: center;
+}
+.ohui-sidebar .label {
+  margin-right: 8px;
+}
+.ohui-sidebar .fa.pull-right {
+  transition: all 0.3s ease-in-out;
+  margin-right: .3em;
+  margin-top: .3em;
+}
+.ohui-sidebar .opened > a > .fa-angle-right {
+  transform: rotate(90deg);
+}
+/* skin-blue sidebar */
+.skin-blue .ohui-sidebar {
+  border-bottom: 1px solid #fff;
+}
+.skin-blue .ohui-sidebar > .sidebar-menu > li {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #dbdbdb;
+}
+.skin-blue .ohui-sidebar > .sidebar-menu > li:first-of-type {
+  border-top: 1px solid #dbdbdb;
+}
+.skin-blue .ohui-sidebar > .sidebar-menu > li:first-of-type > a {
+  border-top: 1px solid #fff;
+}
+.skin-blue .ohui-sidebar > .sidebar-menu > li > a {
+  margin-right: 1px;
+  font-size: 12px;
+}
+.skin-blue .ohui-sidebar > .sidebar-menu > li > a:hover,
+.skin-blue .ohui-sidebar > .sidebar-menu > li.active > a {
+  color: #0a81b1;
+  background: #f3f3f3;
+}
+.skin-blue .ohui-sidebar > .sidebar-menu > li.opened > a {
+  color: #0a81b1;
+  background: #f3f3f3;
+}
+.skin-blue .ohui-sidebar > .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  padding-left: 8px;
+  background: #f9f9f9;
+}
+.skin-blue .ohui-sidebar a {
+  color: #555555;
+}
+.skin-blue .treeview-menu > li > a {
+  color: #777;
+}
+.skin-blue .treeview-menu > li.active > a,
+.skin-blue .treeview-menu > li > a:hover {
+  color: #0a81b1;
+}
+.skin-blue .left-side {
+  background: #f4f4f4;
+  -webkit-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.07);
+}
+.ohui-sidebar-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 230px;
+  z-index: 810;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  transition: left 0.3s ease-in-out;
+}
+.ohui-sidebar-wrap.hide-left {
+  left: -230px;
+}
+.topNavBar {
+  /* 变量 */
+  background: #337ab7;
+  box-shadow: 0 1px 8px 0 #929292;
+}
+.topNavBar .logo-box {
+  padding: 0 20px;
+  height: 56px;
+  line-height: 56px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.topNavBar .logo-box img {
+  display: inline-block;
+  height: 100%;
+}
+.topNavBar .nav-box {
+  display: block;
+  padding-left: 10px;
+}
+.topNavBar .menu-box {
+  display: block;
+  margin: 0;
+  margin-left: 10px;
+  padding: 8px 10px;
+  font-size: 0;
+}
+.topNavBar .menu-box li {
+  display: inline-block;
+}
+.topNavBar .menu-box li .text {
+  display: block;
+  margin: 5px 0;
+  padding: 0 10px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #ebebeb;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.topNavBar .menu-box li.active .text,
+.topNavBar .menu-box li .text:hover {
+  color: #fff;
+  text-shadow: -1px 1px 3px rgba(120, 120, 120, 0.82);
+}
+.topNavBar .userMenu-box {
+  margin-right: 10px;
+  position: relative;
+  z-index: 2;
+}
+.topNavBar .userMenu-box .userName-box {
+  padding: 8px;
+  margin: 6px 0;
+  min-width: 100px;
+  cursor: pointer;
+}
+.topNavBar .userMenu-box .userName-box .text {
+  display: block;
+  color: #fff;
+  text-align: right;
+  font-size: 16px;
+  line-height: 28px;
+}
+.topNavBar .userMenu-box .userMenu {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: -5px;
+  padding: 6px 0;
+  background: #337ab7;
+  border-radius: 6px;
+  transition: all .4s;
+  /*      transform: translateX(-50%);
+      opacity: 0;*/
+}
+.topNavBar .userMenu-box .userMenu li .text {
+  display: block;
+  padding: 0 12px;
+  line-height: 26px;
+  text-align: right;
+  color: #ebebeb;
+  cursor: pointer;
+}
+.topNavBar .userMenu-box .userMenu li .text:hover {
+  color: #fff;
+  background: #6fa7d7;
+}
+.topNavBar .userMenu-box:hover .userMenu {
+  visibility: visible;
+  /*        transform: translateX(0);
+        opacity: 1;*/
 }
 /*# sourceMappingURL=onhonestUI.css.map */

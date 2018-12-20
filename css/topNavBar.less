@@ -1,0 +1,111 @@
+
+
+
+.topNavBar{
+
+  /* 变量 */
+  @bgColor: @main-color;
+  @bgColor2: lighten(@bgColor,18%);
+  @fontColor: darken(@white-color,8%);
+  @fontColor2: @white-color;
+
+  background: @bgColor;
+  box-shadow: 0 1px 8px 0 #929292;
+  .logo-box {
+    padding: 0 20px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    img {
+      display: inline-block;
+      height: 100%;
+    }
+  }
+  .nav-box {
+    display: block;
+    padding-left: 10px;
+  }
+  .menu-box {
+    display: block;
+    margin: 0;
+    margin-left: 10px;
+    padding: 8px 10px;
+    font-size: 0;
+    li {
+      display: inline-block;
+      .text {
+        display: block;
+        margin: 5px 0;
+        padding: 0 10px;
+        line-height: 30px;
+        font-size: 16px;
+        color: @fontColor;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: all .3s ease-in-out;
+
+      }
+      &.active .text ,.text:hover {
+        color: @fontColor2;
+        //background: @bgColor2;
+        text-shadow: -1px 1px 3px rgba(120,120,120,0.82);
+      }
+    }
+  }
+  .userMenu-box {
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+    .userName-box {
+      padding: 8px;
+      margin: 6px 0;
+      min-width: 100px;
+      cursor: pointer;
+      .text {
+        display: block;
+        color: @fontColor2;
+        text-align: right;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+    .userMenu {
+      display: block;
+      visibility: hidden;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: -5px;
+      padding: 6px 0;
+      background: @bgColor;
+      border-radius: 6px;
+      transition: all .4s;
+/*      transform: translateX(-50%);
+      opacity: 0;*/
+      li {
+        .text {
+          display: block;
+          padding: 0 12px;
+          line-height: 26px;
+          text-align: right;
+          color: @fontColor;
+          cursor: pointer;
+          &:hover {
+            color: @fontColor2;
+            background: @bgColor2;
+          }
+        }
+      }
+    }
+    &:hover {
+      .userMenu {
+        visibility: visible;
+/*        transform: translateX(0);
+        opacity: 1;*/
+      }
+    }
+  }
+
+}
