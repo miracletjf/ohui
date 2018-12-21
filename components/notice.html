@@ -21,6 +21,10 @@
       <legend>messagebox 弹出框</legend>
       <button class="ohui-btn-text-default" id="messageBoxBtn">弹出框</button>
     </fieldset>
+    <fieldset style="position: relative">
+      <legend>文字提示 textTip</legend>
+      <button class="ohui-btn-text-default" data-text-tip="文字提示" id="textTipBtn">弹出框</button>
+    </fieldset>
   </main>
 
   <!--  <div class="ohui-message-wrap"><span class="ohui-message-box"></span></div>-->
@@ -40,12 +44,12 @@
 
       $('#messageBoxBtn').on('click',function () {
         messageBoxOpen('消息提示','内容内容内容内容内容内容',function () {
-
         });
       })
+
+      textTip();
+
     })
-
-
   </script>
 </body>
 </html>

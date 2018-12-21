@@ -107,3 +107,37 @@ function messageBoxClose(obj) {
     $(obj).parents('.ohui-popBox-bg').remove();
   })
 }
+
+
+/** 文字提示 textTip
+ *  鼠标移入显示文字提示
+ * */
+
+function textTip() {
+  var $textTipEles = $('[data-text-tip]');
+  $textTipEles.on('mouseenter',function (index) {
+    var _this = this;
+    var text = $(_this).attr('data-text-tip');
+    var html = '<span class="ohui-text-tip">'+text+'</span>';
+
+
+    var $textTip =  $(html).appendTo($('body'))
+      .css({
+          left: $(_this).offset().left + 'px',
+          top: $(_this).offset().top + 'px',
+          marginLeft: function () {
+            return -($(this).outerWidth() - $(_this).outerWidth())/2 + 'px';
+          },
+          marginTop: '-34px'
+        })
+      .animateCss('fadeIn');
+
+    $(_this).on('mouseleave',function () {
+      mouseTouchStop($textTip,1000,function () {
+        $(this).animateCss('fadeOut',function () {
+          $(this).remove();
+        })
+      })
+    })
+  })
+}

@@ -68,7 +68,7 @@ function mouseTouchStop($obj,speed,callback) {
 
   function timeoutFn() {
     return setTimeout(function () {
-      if(typeof callback === 'function') callback();
+      if(typeof callback === 'function') callback.call($obj[0]);
     },speed);
   }
 }

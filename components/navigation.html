@@ -31,7 +31,7 @@
     <fieldset>
       <legend>topNavBar 头部导航</legend>
       <div class="ohui-demo-box">
-        <div class="topNavBar">
+        <div class="ohui-topNavBar">
           <div class="logo-box pull-left">温州粮食管理系统</div>
           <div class="nav-box clearfix">
             <ul class="menu-box pull-left">
@@ -58,6 +58,10 @@
         </div>
       </div>
     </fieldset>
+    <fieldset>
+      <legend>bread crumbs 面包屑</legend>
+      <div class="ohui-breadCrumbs" id="ohuiBreadCrumbs"></div>
+    </fieldset>
   </main>
 
   <script src="../vendor/jquery-1.8.3.min.js"></script>
@@ -67,6 +71,26 @@
     $(function () {
       $('#ohui_tabs').tabsChange();
       loadSiderBar();
+      $('#ohuiBreadCrumbs').breadCrumbs({
+        separator: '>',
+        navs: [
+          {
+            text: '首页',
+            href: './index.html'
+          },
+          {
+            text: '粮食业务',
+            href:'./lsyw.html'
+          },
+          {
+            text: '粮食出入库',
+            href: './lscrk.html'
+          },
+          {
+            text: '出库单'
+          }
+        ]
+      })
     });
 
     function loadSiderBar() {
@@ -79,6 +103,7 @@
         }
       })
     }
+
   </script>
 
 </body>

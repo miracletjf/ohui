@@ -68,4 +68,44 @@
   }
 }
 
-/**/
+/* 面包屑 ohui-breadCrumbs */
+.ohui-breadCrumbs {
+  .clearfix();
+  &-item {
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 16px;
+    color: #606266;
+    cursor: pointer;
+
+    .text {
+      padding-left: 2px;
+      padding-right: 2px;
+      color: inherit;
+      line-height: inherit;
+    }
+    .separator {
+      color: inherit;
+      line-height: inherit;
+      padding-left: 1px;
+      padding-right: 6px;
+    }
+
+    &:last-child {
+      .separator {
+        display: none;
+      }
+    }
+
+    &.active {
+      .text {
+        color: #333;
+        font-weight: bold;
+        &:hover {
+          color: @main-color;
+        }
+      }
+    }
+  }
+}
