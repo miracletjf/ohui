@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>frame 框架</title>
+  <link rel="stylesheet" href="../css/onhonestUI.css">
+</head>
+<body>
+  <div class="ohui-header">
+    <div class="ohui-topNavBar">
+      <div class="logo-box pull-left">温州粮食管理系统</div>
+      <div class="nav-box clearfix">
+        <ul class="menu-box pull-left">
+          <li class="active"><span class="text">测试文字</span></li>
+          <li><span class="text">测试文字</span></li>
+          <li><a class="text" href="">测试文字</a></li>
+          <li><a class="text" href="">测试文字</a></li>
+          <li><a class="text" href="">测试文字</a></li>
+          <li><a class="text" href="">测试文字</a></li>
+          <li><a class="text" href="">测试文字</a></li>
+        </ul>
+        <div class="userMenu-box pull-right">
+          <div class="userName-box">
+            <i class="icon"></i>
+            <span class="text">管理员</span>
+          </div>
+          <ul class="userMenu">
+            <li><span class="text">个人中心</span></li>
+            <li><span class="text">消息</span></li>
+            <li><span class="text">退出</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ohui-aside skin-blue" id="asideMenu"></div>
+  <div class="ohui-main">
+
+  </div>
+  <div class="ohui-footer">
+    <a href="#">杭州安鸿科技股份有限公司版权所有</a><span>Copyright © 2002-2018 All Rights Reserved</span>
+  </div>
+
+  <script src="../vendor/jquery-1.8.3.min.js"></script>
+  <script src="../js/ohui-sidebar-menu.js"></script>
+
+  <script>
+    $(function () {
+      loadSiderBar();
+    });
+    function loadSiderBar() {
+      $.ajax({
+        url: '../json/sideBar/menu.json',
+        success: function (data) {
+          console.log(data);
+          $('#asideMenu').append(compileSideJson(data));
+          $('#asideMenu').find('.sidebar-menu').sidebarMenu();
+        }
+      })
+    }
+  </script>
+</body>
+</html>

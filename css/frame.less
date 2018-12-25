@@ -1,0 +1,60 @@
+@frameTop: 56px;
+@frameLeft: 230px;
+@frameBottom: 32px;
+
+/* 头部 （框架） */
+.ohui-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: @frameTop;
+}
+/* 侧边 （框架） */
+.ohui-aside {
+  position: absolute;
+  top: @frameTop;
+  bottom: 0;
+  left: 0;
+  width: @frameLeft;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  transition: left 0.3s ease-in-out;
+
+  &.transform {
+    left: -@frameLeft;
+  }
+}
+/* 主内容（框架） */
+.ohui-main {
+  position: absolute;
+  top: @frameTop;
+  left: @frameLeft;
+  bottom: @frameBottom;
+  right: 0;
+  &.transform {
+    left: 0;
+  }
+}
+/* 底部 （框架） */
+.ohui-footer {
+  position: absolute;
+  left: @frameLeft;
+  right: 0;
+  bottom: 0;
+  height: @frameBottom;
+  line-height: @frameBottom;
+  font-size: 13px;
+  background: #fff;
+  color: #444;
+  text-align: center;
+  border-top: solid 1px @gray-lighter;
+  span,a {
+    margin: 0 5px;
+    font-size: inherit;
+    color: @gray;
+  }
+  a:hover {
+    color: @main-color;
+  }
+}

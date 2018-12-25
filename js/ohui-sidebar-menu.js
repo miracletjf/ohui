@@ -67,7 +67,7 @@ function complateHtml(type,obj) {
       break;
     case 'menus':
       resHtml += obj.reduce(function (res,item) {
-        if(item.children) {
+        if(item.children && item.children.length > 0 ) {
           res += complateHtml('submenu',item);
         }else {
           res += complateHtml('node',item)

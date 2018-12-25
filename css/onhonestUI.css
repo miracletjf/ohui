@@ -1490,9 +1490,6 @@ button {
   overflow: hidden;
   transition: left 0.3s ease-in-out;
 }
-.ohui-sidebar-wrap.hide-left {
-  left: -230px;
-}
 .ohui-topNavBar {
   /* 变量 */
   background: #337ab7;
@@ -1588,5 +1585,61 @@ button {
   visibility: visible;
   /*        transform: translateX(0);
         opacity: 1;*/
+}
+/* 头部 （框架） */
+.ohui-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 56px;
+}
+/* 侧边 （框架） */
+.ohui-aside {
+  position: absolute;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  width: 230px;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  transition: left 0.3s ease-in-out;
+}
+.ohui-aside.transform {
+  left: -230px;
+}
+/* 主内容（框架） */
+.ohui-main {
+  position: absolute;
+  top: 56px;
+  left: 230px;
+  bottom: 32px;
+  right: 0;
+}
+.ohui-main.transform {
+  left: 0;
+}
+/* 底部 （框架） */
+.ohui-footer {
+  position: absolute;
+  left: 230px;
+  right: 0;
+  bottom: 0;
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px;
+  background: #fff;
+  color: #444;
+  text-align: center;
+  border-top: solid 1px #eeeeee;
+}
+.ohui-footer span,
+.ohui-footer a {
+  margin: 0 5px;
+  font-size: inherit;
+  color: #555555;
+}
+.ohui-footer a:hover {
+  color: #337ab7;
 }
 /*# sourceMappingURL=onhonestUI.css.map */
