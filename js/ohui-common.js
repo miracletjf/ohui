@@ -4,6 +4,7 @@
 *     animationName: animation.css 对应的 class
 *     speed: animation.css 对应的 速度 class 默认 'fast'
 *     callback: 动画完成后的回调，this 指向 当前对象
+*
 *   创建时间：2018-12-12 17:04:36
 *   创建者： 汤井福
 * */
@@ -15,7 +16,6 @@ $.fn.extend({
     }else if(typeof speed === 'undefined'){
       speed = 'fast'
     }
-
 
     var animationEnd = (function(el) {
       var animations = {
@@ -47,6 +47,10 @@ $.fn.extend({
 *     $obj: 需要监听的 jQuery 对象
 *     speed: 定时器执行时间 （可省略，默认值，2000）
 *     callback: 需要执行的函数
+*
+*
+*   创建时间：2018-12-22 17:04:36
+*   创建者： 汤井福
 * */
 
 function mouseTouchStop($obj,speed,callback) {
@@ -62,7 +66,7 @@ function mouseTouchStop($obj,speed,callback) {
   $obj.on('mouseenter',function () {
     clearTimeout(timeId);
   })
-  $obj.on('mouseout',function () {
+  $obj.on('mouseleave',function () {
     timeId = timeoutFn();
   })
 

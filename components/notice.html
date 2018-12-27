@@ -37,16 +37,17 @@
 
   <script>
     $(function () {
+      // 加载动画
       $('#loadingPage').on('click',function (e) {
         loadingOpen();
         setTimeout(loadingClose,2000);
-      })
-
+      });
+      // 弹出 messageBox
       $('#messageBoxBtn').on('click',function () {
-        messageBoxOpen('消息提示','内容内容内容内容内容内容',function () {
+        messageBoxOpen('消息提示','这里是一段内容，此处省略1000000字',function () {
         });
-      })
-
+      });
+      // 生成文字提示
       textTip();
 
     })

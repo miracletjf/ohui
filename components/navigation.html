@@ -98,12 +98,15 @@
         url: '../json/sideBar/menu.json',
         success: function (data) {
           console.log(data);
-          $('#asideMenu').append(compileSideJson(data));
-          $('#asideMenu').find('.sidebar-menu').sidebarMenu();
+          $('#asideMenu').sidebarMenu({
+            data: data,
+            callback: function () {
+              console.log(this);
+            }
+          });
         }
       })
     }
-
   </script>
 
 </body>

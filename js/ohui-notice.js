@@ -2,7 +2,9 @@
 *   页面进入时 调用 loadingAppend(text);
 *     参数说明：
  *     text 表示要提示的内容 （可不填，有默认值）
-*   页面加载完成时 调用 loadingRemove();
+ *   页面加载完成时 调用 loadingRemove();
+ *   创建时间：2018-12-22 16:08:28
+ *   创建者： 汤井福
 * */
 
 function loadingOpen(text) {
@@ -27,6 +29,9 @@ function loadingClose() {
  *      type: 提示框类型 [info（默认值）,success,error,warning,prompt,help]
  *  隐藏 message
  *    无需调用，自动执行
+ *
+ *   创建时间：2018-12-22 17:04:36
+ *   创建者： 汤井福
  *
  * */
 function messageOpen(text,type) {
@@ -53,8 +58,14 @@ function messageClose($obj){
 }
 
 /** 消息框 messageBox
+ *   参数：
+ *    title   弹出框的标题
+ *    content 弹出框的内容
+ *    callback() 回调函数
+ *      this 指向弹出层body
  *
- *
+ *   创建时间：2018-12-12 17:04:36
+ *   创建者： 汤井福
  * */
 function messageBoxOpen(title,content,callback) {
   var htmlText = '  <div class="ohui-popBox-bg">\n' +
@@ -98,9 +109,6 @@ function messageBoxOpen(title,content,callback) {
     }
     messageBoxClose(this);
   })
-
-
-
 }
 function messageBoxClose(obj) {
   $('.ohui-message-box').animateCss('fadeOutUp',function () {
@@ -111,6 +119,9 @@ function messageBoxClose(obj) {
 
 /** 文字提示 textTip
  *  鼠标移入显示文字提示
+ *
+ *   创建时间：2018-12-22 17:04:36
+ *   创建者： 汤井福
  * */
 
 function textTip() {

@@ -97,7 +97,7 @@
         <span class="ohui-input-name">选择日期</span>
         <label class="ohui-input-box">
           <span class="ohui-icon ohui-icon-calendar" title="日历"></span>
-          <input type="text" class="ohui-input" id="datePrick" readonly>
+          <input type="text" class="ohui-input" id="datePrick" >
         </label>
       </div>
     </fieldset>
@@ -128,16 +128,25 @@
   <script>
     $(function () {
       // 选择框
-      let select = new OhuiSelect('#select_input',[{id:'n0',text:'t0'},{id:'n1',text:'t1'},{id:'n2',text:'t2'}],function ($item) {
-        console.log($item.text());
-      })
+      $('#select_input').ohuiSelect({
+        array: [{id:'n0',text:'t0'},{id:'n1',text:'t1'},{id:'n2',text:'t2'}],
+        value: 't1',
+        callback: function ($ele) {
+          console.log($ele);
+        }
+      });
       // 日期选择
       laydate.render({
         elem: '#datePrick',
         range: '-'
       });
       //省市县
-      new DistrictPick('#districtPick')
+      $('#districtPick').ohuiDistrictPick({
+        callback: function (province,city,area) {
+          console.log(province,city,area);
+          console.log(this);
+        }
+      });
     });
   </script>
 

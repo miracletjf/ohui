@@ -4,6 +4,9 @@ $.fn.extend({
    *    callback(index) 回调函数
    *      this 指向当前点击的对象
    *      index 当前对象 下标
+   *   创建时间：2018-12-4 18:21:06
+   *   修改时间：--
+   *   创建者：汤井福
    * */
   tabsChange: function (callback) {
 
@@ -24,6 +27,17 @@ $.fn.extend({
   },
   
   /** bread crumbs 面包屑
+   *  参数：
+   *    options {
+   *      separator 分隔符
+   *      navs      菜单数组
+   *        text    文字
+   *        href    链接
+   *    }
+   *
+   *   创建时间：2018-12-24 18:21:06
+   *   修改时间：--
+   *   创建者：汤井福
    * */
   breadCrumbs: function (options) {
     var html = '';
