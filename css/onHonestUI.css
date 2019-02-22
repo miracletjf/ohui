@@ -1,6 +1,6 @@
+/*颜色方法*/
+/*背景颜色*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import "../vendor/fontAwesome/css/font-awesome.css";
-@import "//at.alicdn.com/t/font_943077_ttjr2l9ev.css";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -258,10 +258,10 @@ button {
 .clearfix:after {
   clear: both;
 }
-.push-left {
+.pull-left {
   float: left;
 }
-.push-right {
+.pull-right {
   float: right;
 }
 .ohui-toolbar {
@@ -585,98 +585,163 @@ button {
 .ohui-icon-message-help {
   background-image: url("images/icons_help.png");
 }
-/*文字，图标按钮*/
-.ohui-btn-default {
+body {
+  /*文字，图标按钮*/
+  /*图标按钮*/
+  /*文字按钮*/
+}
+body table .ohui-btn-default {
+  margin: 4px 6px;
+}
+body .ohui-btn-default {
   display: inline-block;
   vertical-align: middle;
   padding: 0;
   position: relative;
   border: solid 1px #e1e1e1;
   border-radius: 3px;
-  background: transparent;
+  background: #fff;
   cursor: pointer;
 }
-.ohui-btn-default:hover {
+body .ohui-btn-default.plain {
+  background: transparent;
+  border-color: transparent;
+}
+body .ohui-btn-default:hover {
   background-color: #e6e6e6;
   border: solid 1px #adadad;
 }
-.ohui-btn-default:focus {
+body .ohui-btn-default:focus {
   border: solid 1px transparent;
   outline: none;
 }
-.ohui-btn-default:active {
+body .ohui-btn-default:active {
   border: solid 1px transparent;
   background: #f1f1f1f1;
 }
-.ohui-btn-default[disabled]:hover {
+body .ohui-btn-default[disabled]:hover {
   border: solid 1px #ccc;
   background-color: transparent;
 }
-.ohui-btn-default .btn-text {
+body .ohui-btn-default .btn-text {
   margin: 2px 12px 2px 28px;
   display: block;
   line-height: 20px;
   font-size: 12px;
 }
-.ohui-btn-default .ohui-icon {
+body .ohui-btn-default .ohui-icon {
   position: absolute;
   left: 5px;
   top: 4px;
 }
-/*图标按钮*/
-.ohui-btn-icon-default {
+body .ohui-btn-icon-default {
   display: inline-block;
   vertical-align: middle;
   padding: 0;
   position: relative;
   border: solid 1px #e1e1e1;
   border-radius: 3px;
-  background: transparent;
+  background: #fff;
   cursor: pointer;
   width: 28px;
   height: 26px;
 }
-.ohui-btn-icon-default:hover {
+body .ohui-btn-icon-default.plain {
+  background: transparent;
+  border-color: transparent;
+}
+body .ohui-btn-icon-default:hover {
   background-color: #e6e6e6;
   border: solid 1px #adadad;
 }
-.ohui-btn-icon-default:focus {
+body .ohui-btn-icon-default:focus {
   border: solid 1px transparent;
   outline: none;
 }
-.ohui-btn-icon-default:active {
+body .ohui-btn-icon-default:active {
   border: solid 1px transparent;
   background: #f1f1f1f1;
 }
-.ohui-btn-icon-default[disabled]:hover {
+body .ohui-btn-icon-default[disabled]:hover {
   border: solid 1px #ccc;
   background-color: transparent;
 }
-.ohui-btn-icon-default .ohui-icon {
+body .ohui-btn-icon-default .ohui-icon {
   position: absolute;
   left: 5px;
   top: 4px;
 }
-/*文字按钮*/
-.ohui-btn-text-default {
+body .ohui-btn-text-default {
+  display: inline-block;
+  vertical-align: middle;
   padding: 0 10px;
   line-height: 24px;
   height: 24px;
   font-size: 12px;
-  color: #fff;
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  color: #fff;
   background: #337ab7;
 }
-.ohui-btn-text-default:hover {
+body .ohui-btn-text-default:focus {
+  outline: none;
+}
+body .ohui-btn-text-default:hover {
   background: #2d6da3;
 }
-.ohui-btn-text-default:active {
+body .ohui-btn-text-default:active {
   background: #285f8f;
 }
-.ohui-btn-text-default:focus {
-  outline: none;
+body .ohui-btn-text-default.bg-primary {
+  color: #fff;
+  background: #337ab7;
+}
+body .ohui-btn-text-default.bg-primary:hover {
+  background: #2d6da3;
+}
+body .ohui-btn-text-default.bg-primary:active {
+  background: #285f8f;
+}
+body .ohui-btn-text-default.bg-success {
+  color: #fff;
+  background: #5cb85c;
+}
+body .ohui-btn-text-default.bg-success:hover {
+  background: #4cae4c;
+}
+body .ohui-btn-text-default.bg-success:active {
+  background: #449d44;
+}
+body .ohui-btn-text-default.bg-info {
+  color: #fff;
+  background: #5bc0de;
+}
+body .ohui-btn-text-default.bg-info:hover {
+  background: #46b8da;
+}
+body .ohui-btn-text-default.bg-info:active {
+  background: #31b0d5;
+}
+body .ohui-btn-text-default.bg-warning {
+  color: #fff;
+  background: #f0ad4e;
+}
+body .ohui-btn-text-default.bg-warning:hover {
+  background: #eea236;
+}
+body .ohui-btn-text-default.bg-warning:active {
+  background: #ec971f;
+}
+body .ohui-btn-text-default.bg-danger {
+  color: #fff;
+  background: #d9534f;
+}
+body .ohui-btn-text-default.bg-danger:hover {
+  background: #d43f3a;
+}
+body .ohui-btn-text-default.bg-danger:active {
+  background: #c9302c;
 }
 .ohui-radio {
   -webkit-touch-callout: none;
@@ -692,6 +757,8 @@ button {
   user-select: none;
   /* Non-prefixed version, currently
   not supported by any browser */
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
 }
 .ohui-radio > input[type="radio"] {
@@ -721,7 +788,7 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 .ohui-radio > input[type="radio"]:checked + span {
-  color: #337ab7;
+  color: #02457a;
 }
 .ohui-radio > input[type="radio"]:checked + span::after {
   content: '\e61d';
@@ -744,6 +811,8 @@ button {
   user-select: none;
   /* Non-prefixed version, currently
   not supported by any browser */
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
 }
 .ohui-checkbox > input[type="checkbox"] {
@@ -772,7 +841,7 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 .ohui-checkbox > input[type="checkbox"]:checked + span {
-  color: #337ab7;
+  color: #02457a;
 }
 .ohui-checkbox > input[type="checkbox"]:checked + span::after {
   content: '\e601';
@@ -794,6 +863,8 @@ button {
   user-select: none;
   /* Non-prefixed version, currently
   not supported by any browser */
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
 }
 .ohui-switch > input[type="checkbox"] {
@@ -806,11 +877,11 @@ button {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  width: 40px;
-  height: 20px;
+  width: 36px;
+  height: 18px;
   background: #dcdfe6;
   border: solid 1px #dcdfe6;
-  border-radius: 10px;
+  border-radius: 9px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -820,8 +891,8 @@ button {
   content: '';
   left: 1px;
   top: 1px;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #fff;
   -webkit-transition: all 0.3s;
@@ -829,14 +900,14 @@ button {
   transition: all 0.3s;
 }
 .ohui-switch > input[type="checkbox"]:checked + span {
-  background: #337ab7;
-  border-color: #337ab7;
+  background: #02457a;
+  border-color: #02457a;
 }
 .ohui-switch > input[type="checkbox"]:checked + span::after {
-  margin-left: 20px;
+  margin-left: 18px;
 }
 .ohui-input {
-  padding: 0 10px;
+  padding: 0 6px;
   width: 100%;
   line-height: 24px;
   height: 24px;
@@ -865,13 +936,36 @@ button {
   background: #fafafa;
   cursor: not-allowed;
 }
+select.ohui-input {
+  padding-right: 0;
+}
 .ohui-input-box {
   position: relative;
   width: 200px;
   box-sizing: border-box;
+  font-size: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  not supported by any browser */
   display: inline-block;
   vertical-align: middle;
-  font-size: 0;
+  cursor: pointer;
+}
+.ohui-input-box.sm-width {
+  width: 160px;
+}
+.ohui-input-box.lg-width {
+  width: 260px;
 }
 .ohui-input-box .ohui-icon {
   position: absolute;
@@ -899,6 +993,7 @@ button {
   line-height: 26px;
   font-size: 14px;
   text-align: right;
+  min-width: 90px;
 }
 .ohui-input-name:after {
   position: absolute;
@@ -954,6 +1049,100 @@ button {
   display: inline-block;
   vertical-align: middle;
 }
+.ohui-form-group.required .ohui-input-name::before {
+  content: '*';
+  color: #f00;
+  margin-left: 1px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.ohui-select-ul {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  margin-top: -1px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 5;
+  box-shadow: 1px 2px 6px #aaa;
+}
+.ohui-select-ul > li {
+  position: relative;
+  padding-left: 6px;
+  padding-right: 20px;
+  border-bottom: solid 1px #ccc;
+  cursor: pointer;
+}
+.ohui-select-ul > li .fa-angle-right {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.ohui-select-ul > li .text {
+  display: block;
+  line-height: 24px;
+  font-size: 12px;
+}
+.ohui-select-ul > li .ohui-select-ul {
+  left: 100%;
+  top: 0px;
+}
+.ohui-select-ul > li:last-child {
+  border-bottom: none;
+}
+.ohui-select-ul > li.active > .text {
+  color: #02457a;
+}
+.ohui-select-ul > li.active > .fa-angle-right {
+  color: #02457a;
+}
+.ohui-select-ul > li.active > .ohui-select-ul {
+  display: block;
+}
+.ohui-switch-box {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 0 10px 0 10px;
+  color: #02457a;
+}
+.ohui-dd-select {
+  position: absolute;
+  width: 700px;
+  margin-top: 4px;
+  z-index: 2;
+}
+.ohui-dd-select select {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 120px;
+  padding-left: 4px;
+  font-size: 13px;
+  height: 24px;
+  line-height: 24px;
+  margin-right: 4px;
+  border: solid 1px #ccc;
+}
+.ohui-input-tip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  line-height: 18px;
+  font-size: 12px;
+  color: #f33;
+  text-align: center;
+}
 .ohui-panel {
   text-align: left;
   margin: 0;
@@ -961,11 +1150,11 @@ button {
 }
 .ohui-panel-header {
   position: relative;
-  background-color: #337ab7;
+  background-color: #f8f8f8;
   padding: 6px 15px;
   line-height: 16px;
   font-size: 0;
-  color: #fff;
+  color: #333;
   border: solid 1px #ccc;
 }
 .ohui-panel-header > h2 {
@@ -974,6 +1163,7 @@ button {
   line-height: inherit;
   font-size: 14px;
   color: inherit;
+  font-weight: 600;
 }
 .ohui-panel-header + .ohui-panel-body {
   border-top-width: 0;
@@ -984,9 +1174,9 @@ button {
 }
 .ohui-panel-body .ohui-search-box {
   padding: 4px 10px;
-  border-bottom: solid 1px #ccc;
 }
 .ohui-panel-body .ohui-search-box + .ohui-toolbar {
+  border-top-width: 1px;
   border-bottom-width: 0;
 }
 .ohui-panel-body .ohui-toolbar {
@@ -1005,6 +1195,8 @@ button {
   border: solid 1px #ccc;
   border-width: 0;
   border-bottom-width: 1px;
+  overflow: auto;
+  min-height: 120px;
 }
 .ohui-table > thead > tr > th,
 .ohui-table thead > tr > td,
@@ -1016,6 +1208,7 @@ button {
   background-color: #efefef;
   color: #000;
   text-align: center;
+  min-width: 70px;
 }
 .ohui-table > thead > tr > th:hover,
 .ohui-table thead > tr > td:hover,
@@ -1054,6 +1247,7 @@ button {
   text-align: center;
 }
 .ohui-badge {
+  margin-right: 10px;
   position: relative;
 }
 .ohui-badge i.times {
@@ -1064,8 +1258,67 @@ button {
   line-height: 17px;
   padding: 0 4px;
   border-radius: 8px;
-  background-color: #d9534f;
   color: #fff;
+  background: #d9534f;
+}
+.ohui-badge i.times:hover {
+  background: #d43f3a;
+}
+.ohui-badge i.times:active {
+  background: #c9302c;
+}
+.ohui-badge i.times.bg-primary {
+  color: #fff;
+  background: #337ab7;
+}
+.ohui-badge i.times.bg-primary:hover {
+  background: #2d6da3;
+}
+.ohui-badge i.times.bg-primary:active {
+  background: #285f8f;
+}
+.ohui-badge i.times.bg-success {
+  color: #fff;
+  background: #5cb85c;
+}
+.ohui-badge i.times.bg-success:hover {
+  background: #4cae4c;
+}
+.ohui-badge i.times.bg-success:active {
+  background: #449d44;
+}
+.ohui-badge i.times.bg-info {
+  color: #fff;
+  background: #5bc0de;
+}
+.ohui-badge i.times.bg-info:hover {
+  background: #46b8da;
+}
+.ohui-badge i.times.bg-info:active {
+  background: #31b0d5;
+}
+.ohui-badge i.times.bg-warning {
+  color: #fff;
+  background: #f0ad4e;
+}
+.ohui-badge i.times.bg-warning:hover {
+  background: #eea236;
+}
+.ohui-badge i.times.bg-warning:active {
+  background: #ec971f;
+}
+.ohui-badge i.times.bg-danger {
+  color: #fff;
+  background: #d9534f;
+}
+.ohui-badge i.times.bg-danger:hover {
+  background: #d43f3a;
+}
+.ohui-badge i.times.bg-danger:active {
+  background: #c9302c;
+}
+.ohui-badge:last-child {
+  margin-right: 0;
 }
 .ohui-loading-wrap {
   position: fixed;
@@ -1166,7 +1419,7 @@ button {
 .ohui-message-box-header {
   position: relative;
   padding: 0 10px;
-  background: #337ab7;
+  background: #02457a;
 }
 .ohui-message-box-header .h2 {
   height: 40px;
@@ -1250,7 +1503,8 @@ button {
   margin-top: 4px;
 }
 .ohui-tabs-head {
-  padding: 0 12px;
+  margin: 0 10px;
+  padding: 0 10px;
   border-bottom: solid 2px #2991d9;
 }
 .ohui-tabs-head > li {
@@ -1303,11 +1557,15 @@ button {
 }
 .ohui-tabs-body {
   padding-top: 4px;
-  border: solid 1px #337ab7;
+  margin: 0 10px;
+  border: solid 1px #02457a;
   border-top: none;
 }
 .ohui-tabs-body > li {
-  padding: 10px 15px;
+  padding: 2px;
+}
+.ohui-tabs-body.no-border {
+  border: none;
 }
 /* 面包屑 ohui-breadCrumbs */
 .ohui-breadCrumbs:before,
@@ -1354,7 +1612,7 @@ button {
   font-weight: bold;
 }
 .ohui-breadCrumbs-item.active .text:hover {
-  color: #337ab7;
+  color: #02457a;
 }
 /*
     Component: Sidebar
@@ -1484,7 +1742,7 @@ button {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 230px;
+  width: 210px;
   z-index: 810;
   background-color: #f4f4f4;
   overflow: hidden;
@@ -1492,8 +1750,12 @@ button {
 }
 .ohui-topNavBar {
   /* 变量 */
-  background: #337ab7;
   box-shadow: 0 1px 8px 0 #929292;
+  background-image: -webkit-linear-gradient(top, #02457a 0%, #023761 100%);
+  background-image: -o-linear-gradient(top, #02457a 0%, #023761 100%);
+  background-image: linear-gradient(to bottom, #02457a 0%, #023761 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff02457a', endColorstr='#ff023761', GradientType=0);
 }
 .ohui-topNavBar .logo-box {
   padding: 0 20px;
@@ -1563,7 +1825,7 @@ button {
   top: 100%;
   margin-top: -5px;
   padding: 6px 0;
-  background: #337ab7;
+  background: #02457a;
   border-radius: 6px;
   transition: all .4s;
   /*      transform: translateX(-50%);
@@ -1579,7 +1841,7 @@ button {
 }
 .ohui-topNavBar .userMenu-box .userMenu li .text:hover {
   color: #fff;
-  background: #6fa7d7;
+  background: #0378d4;
 }
 .ohui-topNavBar .userMenu-box:hover .userMenu {
   visibility: visible;
@@ -1600,19 +1862,19 @@ button {
   top: 56px;
   bottom: 0;
   left: 0;
-  width: 230px;
+  width: 210px;
   background-color: #f4f4f4;
   overflow: hidden;
   transition: left 0.3s ease-in-out;
 }
 .ohui-aside.transform {
-  left: -230px;
+  left: -210px;
 }
 /* 主内容（框架） */
 .ohui-main {
   position: absolute;
   top: 56px;
-  left: 230px;
+  left: 210px;
   bottom: 32px;
   right: 0;
 }
@@ -1622,7 +1884,7 @@ button {
 /* 底部 （框架） */
 .ohui-footer {
   position: absolute;
-  left: 230px;
+  left: 210px;
   right: 0;
   bottom: 0;
   height: 32px;
@@ -1640,6 +1902,6 @@ button {
   color: #555555;
 }
 .ohui-footer a:hover {
-  color: #337ab7;
+  color: #02457a;
 }
-/*# sourceMappingURL=onhonestUI.css.map */
+/*# sourceMappingURL=onHonestUI.css.map */

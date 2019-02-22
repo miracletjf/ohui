@@ -68,7 +68,6 @@ $.fn.extend({
       res += curHtml
       return res;
     },'');
-    console.log(html)
 
     return this.append(html);
   }

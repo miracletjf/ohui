@@ -1,5 +1,7 @@
 .ohui-label-base() {
   .noselect();
+  display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
 }
 .form-icon-base(@fontSize: 14px){
@@ -93,19 +95,19 @@
       position: relative;
       display: inline-block;
       vertical-align: middle;
-      width: 40px;
-      height: 20px;
+      width: 36px;
+      height: 18px;
       background: @disable-color;
       border: solid 1px @disable-color;
-      border-radius: 10px;
+      border-radius: 9px;
       .transition(all 0.3s);
       &::after {
         position: absolute;
         content: '';
         left: 1px;
         top: 1px;
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
         border-radius: 50%;
         background: #fff;
         .transition(all 0.3s);
@@ -115,7 +117,7 @@
       background: @main-color;
       border-color: @main-color;
       &::after {
-        margin-left: 20px;
+        margin-left: 18px;
       }
     }
   }
@@ -123,13 +125,14 @@
 
 // input 输入框
 .ohui-input {
-  padding: 0 10px;
+  padding: 0 6px;
   width: 100%;
   line-height: 24px;
   height: 24px;
   font-size: 12px;
   border: solid 1px @border-color;
   .box-sizing(border-box);
+
 
   &:focus {
     border-color: @input-border-color;
@@ -151,14 +154,25 @@
     cursor: not-allowed;
   }
 }
+// select
+select.ohui-input {
+  padding-right: 0;
+}
 // input-box
 .ohui-input-box {
   position: relative;
   width: 200px;
   box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 0;
+  .ohui-label-base();
+
+  &.sm-width {
+    width: 160px;
+  }
+  &.lg-width {
+    width: 260px
+  }
+
 
 
   .ohui-icon {
@@ -189,6 +203,7 @@
   line-height: 26px;
   font-size: 14px;
   text-align: right;
+  min-width: 90px;
   &:after {
     position: absolute;
     content: ':';
@@ -247,6 +262,117 @@
   margin: 5px 10px 5px 0;
   display: inline-block;
   vertical-align: middle;
+  &.required {
+    .ohui-input-name {
+      &::before {
+        content: '*';
+        color: #f00;
+        margin-left: 1px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+// ohui-select-ul
+.ohui-select-ul {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  margin-top: -1px;
+  border: solid 1px @border-color;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 5;
+  box-shadow: 1px 2px 6px #aaa;
+  > li {
+    position: relative;
+    padding-left: 6px;
+    padding-right: 20px;
+    border-bottom: solid 1px @border-color;
+    cursor: pointer;
+
+    .fa-angle-right {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+
+    .text {
+      display: block;
+      line-height: 24px;
+      font-size: 12px;
+    }
+    .ohui-select-ul {
+      left: 100%;
+      top: 0px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+    &.active {
+      > .text {
+        color: @main-color;
+      }
+      > .fa-angle-right {
+        color: @main-color;
+      }
+      > .ohui-select-ul {
+        display: block;
+      }
+    }
+  }
+}
+
+.ohui-switch-box {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 0 10px 0 10px;
+  color: @main-color;
+}
+
+// ohui-dd-select
+.ohui-dd-select {
+  position: absolute;
+  width: 700px;
+  margin-top: 4px;
+  z-index: 2;
+  select {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 120px;
+    padding-left: 4px;
+    font-size: 13px;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 4px;
+    border: solid 1px @border-color;
+  }
+}
+
+// 提示字
+.ohui-input-tip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  line-height: 18px;
+  font-size: 12px;
+  color: #f33;
+  text-align: center;
 }
 
 

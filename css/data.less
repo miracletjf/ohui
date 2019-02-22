@@ -8,11 +8,19 @@
     line-height: 17px;
     padding: 0 4px;
     border-radius: 8px;
-    background-color: @brand-danger;
-    color: #fff;
+
+    // 背景颜色配置
+    .bg-base-color-groups(#fff,@brand-danger);
   }
+
+
 }
 
 .ohui-badge {
+  margin-right: 10px;
   .ohui-badge-base();
+
+  &:last-child {
+    margin-right: 0;
+  }
 }

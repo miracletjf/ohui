@@ -1,87 +1,70 @@
 [
   {
-    "title": "主菜单",
-    "menus": [
+    "name": "主菜单",
+    "childs": [
       {
         "name": "仪表盘",
-        "icon": "dashboard",
-        "children": [
+        "menuImage": "dashboard",
+        "childs": [
           {
             "name": "仪表盘 v1"
           },
           {
-            "icon": "send",
+            "menuImage": "send",
             "name": "发送"
           }
         ]
       },
       {
         "name": "布局选项",
-        "icon": "files-o",
-        "children": [
+        "menuImage": "files-o",
+        "childs": [
           {
             "name": "布局1",
-            "url": "v3.bootcss.com/"
+            "action": "v3.bootcss.com/"
           },
           {
             "name": "布局2",
-            "url": "v3.bootcss.com/"
+            "action": "v3.bootcss.com/"
           },
           {
             "name": "布局3",
-            "url": "v3.bootcss.com/"
+            "action": "v3.bootcss.com/"
           },
           {
             "name": "布局4",
-            "url": "v3.bootcss.com/"
+            "action": "v3.bootcss.com/"
           }
         ]
       },
       {
         "name": "图表",
-        "icon": "pie-chart",
-        "children":[
+        "menuImage": "pie-chart",
+        "childs":[
           {
             "name": "折线图",
-            "icon": "line-chart",
-            "url": "http://echarts.baidu.com/"
+            "menuImage": "line-chart",
+            "action": "http://echarts.baidu.com/"
           },
           {
             "name": "柱状图",
-            "icon": "bar-chart",
-            "url":"http://echarts.baidu.com/"
+            "menuImage": "bar-chart",
+            "action":"http://echarts.baidu.com/"
           },
           {
             "name": "饼图",
-            "icon": "pie-chart",
-            "url": "http://echarts.baidu.com/"
+            "menuImage": "pie-chart",
+            "action": "http://echarts.baidu.com/"
           }
         ]
       },
       {
         "name": "文档",
-        "icon": "book"
+        "menuImage": "book"
       },
       {
         "name": "JQ API",
-        "url": "https://api.jquery.com/"
-      }
-    ]
-  },
-  {
-    "title": "第二菜单",
-    "menus": [
-      {
-        "name": "菜单-2-1",
-        "url": "https://bongo.cat/"
-      },
-      {
-        "name": "菜单-2-2",
-        "url": "https://heraclosgame.com/"
-      },
-      {
-        "name": "菜单-2-3",
-        "url": "https://www.cs.usfca.edu/~galles/visualization/HeapSort.html"
+        "action": "https://api.jquery.com/"
       }
     ]
   }

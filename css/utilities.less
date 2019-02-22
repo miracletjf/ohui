@@ -8,3 +8,35 @@
   user-select: none; /* Non-prefixed version, currently
   not supported by any browser */
 }
+
+/*颜色方法*/
+.color-base(@bg-color: @brand-primary,@text-color: #fff){
+  color: @text-color;
+  background: @bg-color;
+  &:hover {
+    background: darken(@bg-color,5%);
+  }
+  &:active {
+    background: darken(@bg-color,10);
+  }
+}
+
+/*背景颜色*/
+.bg-base-color-groups(@text-color: #fff,@bg-color: @brand-primary){
+  .color-base(@bg-color,@text-color);
+  &.bg-primary {
+    .color-base(@brand-primary,@text-color);
+  }
+  &.bg-success {
+    .color-base(@brand-success,@text-color);
+  }
+  &.bg-info {
+    .color-base(@brand-info,@text-color);
+  }
+  &.bg-warning {
+    .color-base(@brand-warning,@text-color);
+  }
+  &.bg-danger {
+    .color-base(@brand-danger,@text-color);
+  }
+}

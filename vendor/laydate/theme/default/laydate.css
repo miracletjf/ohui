@@ -83,7 +83,7 @@ html #layuicss-laydate {
 .layui-laydate-header {
     position: relative;
     line-height: 20px;
-    padding: 8px 60px 5px;
+    padding: 8px 40px 5px;
 }
 
 .laydate-set-ym span, .layui-laydate-header i {

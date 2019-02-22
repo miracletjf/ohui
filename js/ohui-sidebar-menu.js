@@ -2,11 +2,12 @@
   /** sideBar 编译
    *  编译json到 html
    * */
-  function compileSideJson(datas) {
+  function compileSideJson(options) {
+    var datas = options.data;
     var resHtml = '';
     resHtml += datas.reduce(function (res,item) {
       res += complateHtml('header',item);
-      res += complateHtml('menus',item.menus);
+      res += complateHtml('menus',item.childs);
       return res;
     },'');
     return '<div class="ohui-sidebar"><ul class="sidebar-menu">'+resHtml+'</ul></div>';
@@ -16,11 +17,11 @@
     var resHtml = '';
     switch (type) {
       case 'header':
-        resHtml += '<li class="header">'+obj.title+'</li>';
+        resHtml += '<li class="header">'+obj.name+'</li>';
         break;
       case 'menus':
         resHtml += obj.reduce(function (res,item) {
-          if(item.children && item.children.length > 0 ) {
+          if(item.childs && item.childs.length > 0 ) {
             res += complateHtml('submenu',item);
           }else {
             res += complateHtml('node',item)
@@ -30,14 +31,14 @@
         break;
       case 'submenu':
         resHtml += '<li class="treeview"><a href="#">';
-        if(obj.icon){
-          resHtml += '<i class="fa fa-'+obj.icon+'"></i> <span>'+obj.name+'</span>';
+        if(obj.menuImage){
+          resHtml += '<i class="fa fa-'+obj.menuImage+'"></i> <span>'+obj.name+'</span>';
         }else{
-          resHtml += '<i class="fa fa-circle-o"></i> <span>'+obj.name+'</span>';
+          resHtml += '<i class="fa fa-folder-o"></i> <span>'+obj.name+'</span>';
         }
         resHtml += '<i class="fa fa-angle-right pull-right"></i></a>';
         resHtml += '<ul class="treeview-menu">';
-        resHtml += obj.children.reduce(function (res,item) {
+        resHtml += obj.childs.reduce(function (res,item) {
           res += complateHtml('node',item);
           return res;
         },'');
@@ -45,13 +46,13 @@
         break;
       case 'node':
         resHtml += '<li>';
-        if(obj.url){
-          resHtml += '<a href="'+obj.url+'">';
+        if(obj.action){
+          resHtml += '<a href="'+obj.action+'">';
         }else {
           resHtml += '<a href="#">';
         }
-        if(obj.icon){
-          resHtml += '<i class="fa fa-'+obj.icon+'"></i>';
+        if(obj.menuImage){
+          resHtml += '<i class="fa fa-'+obj.menuImage+'"></i>';
         }else {
           resHtml += '<i class="fa fa-circle-o"></i>';
         }
@@ -83,7 +84,7 @@
       animationSpeed: 300
     };
     var options = $.extend({},defaults,opt);
-    var $sideBar = $(compileSideJson(options.data)).appendTo(this);
+    var $sideBar = $(compileSideJson(options)).appendTo(this);
 
     $sideBar.on('click', 'li a', function (e) {
       var $this = $(this);
@@ -128,9 +129,21 @@
       }
 
       if(options.callback && typeof options.callback === 'function'){
+        e.preventDefault();
         options.callback.call(this)
       }
     });
+
+    ;(function firstClick() {
+      var $parentNode = $sideBar.find('li a').first();
+      $parentNode.click();
+      if($parentNode.attr('href') && $parentNode.attr('href') === '#'){
+        var $node = $parentNode.parent().find('li a').first();
+        if($node.attr('href') && $node.attr('href') !== '#'){
+          $node.click();
+        }
+      }
+    })();
 
     return this;
   }

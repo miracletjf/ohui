@@ -1,9 +1,12 @@
 /* navigation */
+@tabBgColor: #f8f8f8;
+
 
 .ohui-tabs {
   margin-top: 4px;
   &-head {
-    padding: 0 12px;
+    margin: 0 10px;
+    padding: 0 10px;
     border-bottom: solid 2px #2991d9;
     > li {
       position: relative;
@@ -55,15 +58,18 @@
           background-position: 0 -169px;
         }
       }
-
     }
   }
   &-body {
     padding-top: 4px;
+    margin: 0 10px;
     border: solid 1px @main-color;
     border-top: none;
     > li {
-      padding: 10px 15px;
+      padding: 2px;
+    }
+    &.no-border {
+      border: none;
     }
   }
 }
